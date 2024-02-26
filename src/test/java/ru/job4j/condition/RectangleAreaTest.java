@@ -2,6 +2,7 @@ package ru.job4j.condition;
 
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.assertj.core.api.BDDAssertions.withPrecision;
 
@@ -14,23 +15,23 @@ class RectangleAreaTest {
         double k = 2;
         double output = RectangleArea.square(p, k);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
-        }
-
-        @Test
-    void whenP4K1Square1() {
-            int expected = 1;
-            int p = 4;
-            double k = 1;
-            double output = RectangleArea.square(p, k);
-            assertThat(output).isEqualTo(expected, withPrecision(0.01));
-        }
-
-       @Test
-    void whenP10K5Square3dot47() {
-           double expected = 3.47;
-           int p = 10;
-           double k = 5;
-           double output = RectangleArea.square(p, k);
-           assertThat(output).isEqualTo(expected, withPrecision(0.01));
-       }
     }
+
+    @Test
+    void whenP4K1Square1() {
+        int expected = 1;
+        int p = 4;
+        double k = 1;
+        double output = RectangleArea.square(p, k);
+        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+    }
+
+    @Test
+    void whenP10K5Square3dot47() {
+        double expected = 3.47;
+        int p = 10;
+        double k = 5;
+        double output = RectangleArea.square(p, k);
+        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+    }
+}
