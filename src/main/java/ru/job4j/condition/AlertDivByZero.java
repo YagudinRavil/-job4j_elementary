@@ -2,12 +2,10 @@ package ru.job4j.condition;
 
 public class AlertDivByZero {
     public static void checkNumber(int number) {
-        boolean result = number == 0;
-        if (result) {
+        if (number == 0) {
             System.out.println("Could not div by 0.");
         }
-        result = number < 0;
-        if (result) {
+        if (number < 0) {
             System.out.println("This is negative number");
         }
     }
